@@ -14,7 +14,7 @@ const ProjectCard2 = ({
   return (
     <Link href={link}>
       <div className="p-4 bg-accentLight dark:bg-accentDark w-full rounded-lg shadow-lg">
-        <h2 className="text-2xl font-bold mb-2">{title}</h2>
+        <h2 className="text-2xl font-bold mb-2 line-clamp-1">{title}</h2>
         <p className="text-gray-600 dark:text-gray-100 line-clamp-4">
           {exerpt}
         </p>

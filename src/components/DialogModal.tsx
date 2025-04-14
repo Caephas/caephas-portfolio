@@ -18,7 +18,7 @@ export const DialogModal = ({ demoUrl }: { demoUrl: string }) => {
 
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-black/50 backdrop-blur-sm" />
-        <Dialog.DialogTitle>Demo</Dialog.DialogTitle>
+        <Dialog.DialogTitle className='hidden'>Demo</Dialog.DialogTitle>
         <Dialog.Content
           aria-description="video"
           aria-describedby={undefined}
