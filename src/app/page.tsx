@@ -30,7 +30,8 @@ export default function Home() {
               <strong>Blog:</strong>{" "}
               <a
                 href="https://medium.com/@arinzeobidiegwu"
-                className="underline"
+                // className="underline"
+                className="underline font-semibold text-blue-600 dark:text-blue-400"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -16,7 +16,8 @@ const page = () => {
           You can also find me on{' '}
           <a
             href="https://github.com/caephas"
-            className="underline"
+            // className="underline"
+            className="underline font-semibold text-blue-600 dark:text-blue-400"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -25,7 +26,8 @@ const page = () => {
           and{' '}
           <a
             href="https://www.linkedin.com/in/arinze-obidiegwu-a71a78188/"
-            className="underline"
+            // className="underline"
+            className="underline font-semibold text-blue-600 dark:text-blue-400"
             target="_blank"
             rel="noopener noreferrer"
           >

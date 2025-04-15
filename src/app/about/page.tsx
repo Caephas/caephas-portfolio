@@ -29,14 +29,21 @@ const page = () => {
 
           <p className="mt-6 leading-7">
             My current journey actually lets me explore both sides. As a Research Intern 
-            with <Link href="https://bds.ul.ie/members.html" className="underline">LERO</Link>, I'm focused on using evolutionary computing, specifically Grammatical 
-            Evolution, to design quantum circuits. This approach has proven successful: I was 
-            able to evolve a circuit for Grover's algorithm on 3 qubits that surpassed the 
-            world standard. It's fascinating work, and I'm currently applying these techniques 
-            to other algorithms. Simultaneously, I'm putting my project management skills to 
-            work for <Link href="https://thesafetychic.com/about/" className="underline">TheSafetyChic</Link> in Nigeria, guiding the development of a crucial child safety 
-            mobile app using Flutter. It's fulfilling to lead a project that speeds up getting 
-            help into users' hands and truly connects with them.
+            with{' '}
+            <Link 
+              href="https://bds.ul.ie/members.html" 
+              className="underline font-semibold text-blue-600 dark:text-blue-400"
+            >
+              BDS group
+            </Link>
+            , I'm focused on using evolutionary computing, specifically Grammatical Evolution, to design quantum circuits. This approach has proven successful: I was able to evolve a circuit for Grover's algorithm on 3 qubits that surpassed the world standard. It's fascinating work, and I'm currently applying these techniques to other algorithms. Simultaneously, I'm putting my project management skills to work for{' '}
+            <Link 
+              href="https://thesafetychic.com/about/" 
+              className="underline font-semibold text-blue-600 dark:text-blue-400"
+            >
+              TheSafetyChic
+            </Link>{' '}
+            in Nigeria, guiding the development of a crucial child safety mobile app using Flutter. It's fulfilling to lead a project that speeds up getting help into users' hands and truly connects with them.
           </p>
 
           <p className="mt-6 leading-7">
@@ -46,7 +53,7 @@ const page = () => {
               href="https://www.linkedin.com/posts/arinze-obidiegwu-a71a78188_bgniehackathon2024-google-starstudent-activity-7252029587356876800-4ibL?utm_source=share&utm_medium=member_desktop&rcm=ACoAACxL6vUBK_CMdMvr19o25M_Kt87opNXUOe4" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="underline"
+              className="underline font-semibold text-blue-600 dark:text-blue-400"
             >
               Google BGN Ireland
             </a>
@@ -55,7 +62,7 @@ const page = () => {
               href="https://www.linkedin.com/posts/arinze-obidiegwu-a71a78188_hackathon-winningteam-aciworldwide-activity-7252747561495646208-aQ0z?utm_source=share&utm_medium=member_desktop&rcm=ACoAACxL6vUBK_CMdMvr19o25M_Kt87opNXUOe4" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="underline"
+              className="underline font-semibold text-blue-600 dark:text-blue-400"
             >
               ACI Worldwide Hackathon
             </a>
@@ -68,10 +75,11 @@ const page = () => {
               href="https://medium.com/@arinzeobidiegwu" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="underline"
+              className="underline font-semibold text-blue-600 dark:text-blue-400"
             >
               blog
-            </a>, you'll find me trying to break down complex technical concepts (including some of that ML and Quantum Computing stuff!) using analagoies into understandable formats. I sometimes just write random thoughts or life stuff that pops into my head.
+            </a>
+            , you'll find me trying to break down complex technical concepts (including some of that ML and Quantum Computing stuff!) using analogies into understandable formats. I sometimes just write random thoughts or life stuff that pops into my head.
           </p>
 
           <p className="mt-6 leading-7">
