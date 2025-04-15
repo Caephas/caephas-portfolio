@@ -43,7 +43,7 @@ export default function Home() {
         {/* Right Column: Profile Image */}
         <div className="md:w-1/2 flex items-center justify-center">
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/adventures-of-muna.appspot.com/o/test%2F9EC24DEC-97F3-4185-94FF-6975E3CCCDC6.jpg?alt=media&token=3676631d-fdda-4e81-8a0d-0a2f4c633d10"
+            src="https://firebasestorage.googleapis.com/v0/b/adventures-of-muna.appspot.com/o/test%2FEPT18677.jpg?alt=media&token=2fbc6fea-8551-4553-a022-7f9aa2061b36"
             alt="Arinze"
             className="rounded-md object-contain w-full h-auto"
           />
