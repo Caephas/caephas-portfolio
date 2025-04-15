@@ -1,35 +1,43 @@
 import React from 'react';
+import Link from 'next/link';
 
 const page = () => {
   return (
     <div className="p-6">
       <h2 className="text-6xl">Contact</h2>
       <div className="">
-        <p className="mt-6">
-          Hi there, I am a backend and machine learning engineer with a passion
-          for building scalable and maintainable software systems. I am always
-          looking for new challenges and opportunities to learn and grow in my
-          field. If you have any questions or would like to discuss any
-          potential projects or collaborations, feel free to reach out to me via
-          email at{' '}
-          <a href="mailto:caephas@gmail.com" className="underline">
-            caephas@gmail.com
-          </a>
-          .
+        <p className="mt-6 leading-7">
+          Hi there, I am a software and machine learning engineer with a passion for building scalable and maintainable software systems. I am always looking for new challenges and opportunities to learn and grow in my field, and I'm actively seeking roles in software engineering, machine learning, and research. If you have any questions or would like to discuss potential projects or collaborations, feel free to reach out to me via email at{' '}
+          <a href="mailto:arinzeobidiegwu@gmail.com" className="underline">
+            arinzeobidiegwu@gmail.com
+          </a>.
         </p>
-        <p className="mt-6">
+        <p className="mt-6 leading-7">
           You can also find me on{' '}
-          <a href="https://github.com/caephas" className="underline">
-            github
+          <a
+            href="https://github.com/caephas"
+            className="underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>{' '}
+          and{' '}
+          <a
+            href="https://www.linkedin.com/in/arinze-obidiegwu-a71a78188/"
+            className="underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
           </a>
-          , where I share my personal projects and contribute to open source
-          projects.
+          , where you can view my work history.
         </p>
-        <p className="mt-6">
-          If you are a recruiter or someone looking to hire a backend or machine
-          learning engineer, please don't hesitate to reach out to me. I am
-          always open to new opportunities and would be happy to discuss your
-          needs.
+        <p className="mt-6 leading-7">
+          If you are a recruiter or someone looking to hire a software or machine learning engineer, please don't hesitate to reach out. I would be happy to discuss your needs and explore opportunities.
+        </p>
+        <p className="mt-6 leading-7">
+          Let’s connect, feel free to email me or message me on LinkedIn for further discussion.
         </p>
       </div>
     </div>
