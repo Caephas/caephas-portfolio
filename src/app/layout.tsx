@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import { IBM_Plex_Mono } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import Nav from '@/components/Nav';
 import { ThemeProvider } from 'next-themes';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 
 // Load the font
-const ibm_plex_mono = IBM_Plex_Mono({ subsets: ['latin'], weight: '400' });
+const inter = Inter({ subsets: ['latin'], weight: '400' });
 
 // Enhanced metadata
 export const metadata: Metadata = {
@@ -50,7 +50,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${ibm_plex_mono.className} bg-light dark:bg-dark text-black dark:text-white duration-300 ease-linear`}
+        className={`${inter.className} bg-light dark:bg-dark text-black dark:text-white duration-300 ease-linear`}
       >
         <ThemeProvider
           attribute="class"
@@ -58,7 +58,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange={false}
         >
-          <Nav className={ibm_plex_mono.className} />
+          <Nav className={inter.className} />
           {children}
           <ThemeSwitcher />
         </ThemeProvider>
