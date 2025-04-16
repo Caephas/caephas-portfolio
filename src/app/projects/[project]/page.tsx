@@ -4,6 +4,7 @@ import LED from '@/components/LED';
 import { DialogModal } from '@/components/DialogModal';
 import Loading from '../loading';
 import Link from 'next/link';
+import ImageGalleryModal from '@/components/ImageGalleryModal';
 import { Url } from 'next/dist/shared/lib/router/router';
 
 interface Project {
@@ -13,6 +14,9 @@ interface Project {
   demo: string;
   sourceCode: Url;
   mediumArticle?: Url;
+  images?: string; 
+  appStoreLink?: string;   // New field for iOS App Store URL
+  playStoreLink?: string;  // New field for Google Play Store URL
 }
 
 export default function ProjectPage() {
@@ -20,7 +24,7 @@ export default function ProjectPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [projectId, setProjectId] = useState<string>("");
 
-  // Fetch project data
+  // Fetch project data from Airtable
   const fetchProject = async (projId: string) => {
     try {
       const response = await fetch(
@@ -35,12 +39,14 @@ export default function ProjectPage() {
       setProject(data.fields);
       setIsLoading(false);
       console.log(data.fields);
+      return data;
     } catch (error) {
       console.error('Error fetching project:', error);
+      return null;
     }
   };
 
-  // 1. Extract projectId in a client-side effect
+  // Extract projectId on the client
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const fullUrl = window.location.href;
@@ -49,12 +55,15 @@ export default function ProjectPage() {
     }
   }, []);
 
-  // 2. Once we have projectId, fetch project
+  // Once we have projectId, fetch project data
   useEffect(() => {
     if (projectId) {
       fetchProject(projectId);
     }
   }, [projectId]);
+
+  // Parse the comma-separated images string into an array
+  const imageUrls = project?.images ? project.images.split(',').map(url => url.trim()) : [];
 
   return (
     <>
@@ -66,9 +75,9 @@ export default function ProjectPage() {
           <div className="mt-9 max-w-[700px]">
             <p>{project?.description}</p>
             <div className="mt-6 flex gap-1 flex-wrap">
-              {/* Demo */}
+              {/* Demo button (renders the DialogModal) */}
               {project?.demo && <DialogModal demoUrl={project.demo} />}
-              {/* Source Code */}
+              {/* Source Code button */}
               {project?.sourceCode && (
                 <Link
                   href={project.sourceCode ?? ''}
@@ -81,7 +90,7 @@ export default function ProjectPage() {
                   </div>
                 </Link>
               )}
-              {/* Medium Article */}
+              {/* Medium Article button */}
               {project?.mediumArticle && (
                 <Link
                   href={project.mediumArticle}
@@ -90,6 +99,34 @@ export default function ProjectPage() {
                 >
                   <div className="w-fit border border-gray-600 px-3 py-1 flex items-center gap-2 rounded-md">
                     <p className="text-sm">View Article</p>
+                  </div>
+                </Link>
+              )}
+              {/* Images Gallery button */}
+              {project?.images && imageUrls.length > 0 && (
+                <ImageGalleryModal imageUrls={imageUrls} />
+              )}
+              {/* App Store Link button */}
+              {project?.appStoreLink && (
+                <Link
+                  href={project.appStoreLink}
+                  target="_blank"
+                  className="text-sm"
+                >
+                  <div className="w-fit border border-gray-600 px-3 py-1 flex items-center gap-2 rounded-md">
+                    <p className="text-sm">View on App Store</p>
+                  </div>
+                </Link>
+              )}
+              {/* Play Store Link button */}
+              {project?.playStoreLink && (
+                <Link
+                  href={project.playStoreLink}
+                  target="_blank"
+                  className="text-sm"
+                >
+                  <div className="w-fit border border-gray-600 px-3 py-1 flex items-center gap-2 rounded-md">
+                    <p className="text-sm">View on Play Store</p>
                   </div>
                 </Link>
               )}
