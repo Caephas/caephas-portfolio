@@ -44,7 +44,7 @@ export default function Home() {
         {/* Right Column: Profile Image */}
         <div className="md:w-1/2 flex items-center justify-center">
           <img
-          src="https://caephas-portfolio-storage.s3.eu-west-1.amazonaws.com/EPT18677.jpg"
+          src="https://caephas-portfolio-storage.s3.eu-west-1.amazonaws.com/IMG_3953.JPG"
             alt="Arinze"
             className="rounded-md object-contain w-full h-auto"
           />
