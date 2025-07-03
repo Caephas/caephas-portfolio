@@ -1,31 +1,47 @@
 "use client";
+
+import Image from "next/image";
+import { Typewriter } from "react-simple-typewriter";
 import React from "react";
 
 export default function Home() {
   return (
-    <div className="p-6">
+    <div className="px-6 pt-[100px]">
       {/* Container for columns */}
-      <div className="flex flex-col md:flex-row items-center gap-8 min-h-[80vh]">
-        
+      <div className="container flex flex-col md:flex-row items-center justify-between gap-8 min-h-[80vh]">
         {/* Left Column: Name & Intro */}
         <div className="md:w-1/2 flex flex-col justify-center">
-          <h1 className="text-6xl font-bold mb-10">Arinze Obidiegwu</h1>
+          <h4 className="text-3xl font-medium mb-10">Hello 👋</h4>
+          <h1 className="text-6xl font-bold mb-2">I'm Arinze Obidiegwu,</h1>
+          <h3 className="text-3xl font-medium text-primary mb-10">
+            A{" "}
+            <span className="text-primary">
+              <Typewriter
+                words={[
+                  "Software Engineer.",
+                  "Machine Learning Engineer.",
+                  "Research Scientist.",
+                  "Technical Project Manager.",
+                  "Writer.",
+                ]}
+                loop={true}
+                cursor
+                cursorStyle="|"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1500}
+              />
+            </span>
+          </h3>
 
           <p className="max-w-lg text-lg leading-7">
-            Hi, my name is Arinze Obidiegwu, but you can just call me Arinze. I am a 
-            Software Engineer, Machine Learning Engineer, and Research Scientist who 
-            specializes in Quantum Algorithms &amp; Machine Learning, a Technical Project 
-            Manager, and a writer. I love exploring emerging technologies and finding ways 
-            to push the boundaries of what’s possible.
+            You can call me Arinze. I enjoy breaking down complex topics using
+            analogies and sharing insights on software engineering, quantum
+            computing, machine learning, and life. You’ll find many of my
+            thoughts and writings on my blog — always curious, always learning.
           </p>
-          
-          <p className="max-w-lg text-lg leading-7 mt-6">
-            I often share my thoughts on Software Engineering, Quantum Computing, Machine 
-            Learning, and Life. I also enjoy breaking down complex topics using analogies into more 
-            digestible content on my blog.
-          </p>
-          
-          <ul className="list-none space-y-1 max-w-lg text-lg leading-7 mt-6">
+
+          <ul className="list-none space-y-1 max-w-lg text-xl leading-7 mt-6">
             <li>
               <strong>Blog:</strong>{" "}
               <a
@@ -42,11 +58,13 @@ export default function Home() {
         </div>
 
         {/* Right Column: Profile Image */}
-        <div className="md:w-1/2 flex items-center justify-center">
-          <img
-          src="https://caephas-portfolio-storage.s3.eu-west-1.amazonaws.com/IMG_3953.JPG"
-            alt="Arinze"
-            className="rounded-md object-contain w-full h-auto"
+        <div className="rounded-full relative">
+          <Image
+            src="/profile.png"
+            alt=""
+            width={900}
+            height={900}
+            className="rounded-full"
           />
         </div>
       </div>

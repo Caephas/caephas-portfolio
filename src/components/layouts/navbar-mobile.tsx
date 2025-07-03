@@ -1,0 +1,81 @@
+"use client";
+import React from "react";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import Link from "next/link";
+import { Menu, SquareMenu } from "lucide-react";
+import { Button } from "../ui/button";
+import { usePathname } from "next/navigation";
+
+interface Props {
+  navLinks: {
+    name: string;
+    link: string;
+  }[];
+}
+
+const NavbarMobile = ({ navLinks }: Props) => {
+  const pathname = usePathname();
+
+  return (
+    <nav className="bg-navBg py-4 px-6 flex lg:hidden text-white justify-between items-center">
+      <Link href="/" className="text-2xl">
+        Logo
+      </Link>
+
+      <Sheet>
+        <SheetTrigger>
+          <SquareMenu size={40} strokeWidth={1.75} absoluteStrokeWidth />
+        </SheetTrigger>
+
+        <SheetContent className="pt-20">
+          <SheetHeader>
+            <SheetTitle></SheetTitle>
+            <SheetDescription className="flex flex-col gap-7">
+              {/* links */}
+              <div className="flex flex-col gap-6">
+                {navLinks?.map((item, i) => {
+                  const isActive = pathname === item.link;
+
+                  return (
+                    <div key={i} className="group flex items-center">
+                      <Link
+                        href={item.link}
+                        className={`text-lg font-sans flex items-center gap-2 transition-transform duration-200 ease-in-out hover:scale-110 ${
+                          isActive ? "font-semibold" : ""
+                        }`}
+                      >
+                        {/* Circle */}
+                        <span
+                          className={`w-2 h-2 rounded-full bg-foreground transition-opacity duration-200 ${
+                            isActive
+                              ? "opacity-100"
+                              : "opacity-0 group-hover:opacity-100"
+                          }`}
+                        />
+
+                        {item.name}
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
+
+              <Button className="bg-navBtn text-navBtnForeground w-fit hover:bg-navBtn">
+                Contact Me.
+              </Button>
+            </SheetDescription>
+          </SheetHeader>
+        </SheetContent>
+      </Sheet>
+    </nav>
+  );
+};
+
+export default NavbarMobile;
