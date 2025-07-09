@@ -2,6 +2,8 @@ import { Github, Linkedin, Mail, Phone, Twitter } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { Button } from "../ui/button";
+import Link from "next/link";
+import { cn, scaleStyle } from "@/lib/utils";
 
 const Contact = () => {
   return (
@@ -24,9 +26,15 @@ const Contact = () => {
           Arinze Obidiegwu,
         </h2>
         <p>
-          I enjoy breaking down complex topics using analogies and sharing
-          insights on software engineering, quantum computing, machine learning,
-          and life.{" "}
+          I am always looking for new challenges and opportunities to learn and
+          grow in my field, and I'm actively seeking roles in software
+          engineering, machine learning, and research.
+          <br />
+          <br />
+          <span>
+            If you have any questions or would like to discuss potential
+            projects or collaborations, feel free to reach out to me
+          </span>
         </p>
 
         <div className="flex items-center gap-3">
@@ -36,7 +44,12 @@ const Contact = () => {
 
           <p className="flex flex-col text-base">
             <span>Email</span>
-            <span>Caephas@mail.com</span>
+            <a
+              href="mailto:arinzeobidiegwu@gmail.com"
+              className="hover:underline"
+            >
+              arinzeobidiegwu@gmail.com
+            </a>
           </p>
         </div>
 
@@ -67,10 +80,19 @@ const Contact = () => {
           © {new Date().getFullYear()} Caephas. All Rights Reserved.
         </p>
 
-        <div className="flex gap-10 items-center">
-          <Linkedin size={30} />
-          <Github size={30} />
-          <Twitter size={30} />
+        <div className="flex gap-10 items-center transition-transform">
+          <Link
+            href="https://www.linkedin.com/in/arinze-obidiegwu-a71a78188"
+            className={cn(scaleStyle)}
+          >
+            <Linkedin size={30} />
+          </Link>
+          <Link href="https://github.com/caephas" className={cn(scaleStyle)}>
+            <Github size={30} />
+          </Link>
+          <Link href="https://x.com" className={cn(scaleStyle)}>
+            <Twitter size={30} />
+          </Link>
         </div>
       </div>
     </section>

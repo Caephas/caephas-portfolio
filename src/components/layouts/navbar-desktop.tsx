@@ -17,9 +17,9 @@ const NavbarDesktop = ({ navLinks }: Props) => {
   const { push } = useRouter();
 
   return (
-    <nav className="hidden container bg-navBg py-4 px-6 rounded-full text-white lg:flex items-center justify-between gap-5">
+    <nav className="hidden container bg-navBg py-4  px-6 rounded-full text-white lg:flex items-center justify-between gap-5">
       <Link href="/" className="text-2xl">
-        Caephas
+        <Image src="/logo.svg" alt="" width={200} height={20} />
       </Link>
 
       {/* links */}

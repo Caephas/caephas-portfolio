@@ -12,6 +12,7 @@ import Link from "next/link";
 import { Menu, SquareMenu } from "lucide-react";
 import { Button } from "../ui/button";
 import { usePathname, useRouter } from "next/navigation";
+import Image from "next/image";
 
 interface Props {
   navLinks: {
@@ -27,7 +28,7 @@ const NavbarMobile = ({ navLinks }: Props) => {
   return (
     <nav className="bg-navBg py-4 px-6 flex lg:hidden text-white justify-between items-center">
       <Link href="/" className="text-2xl">
-        Caephas
+        <Image src="/logo.svg" alt="" width={200} height={20} />
       </Link>
 
       <Sheet>
