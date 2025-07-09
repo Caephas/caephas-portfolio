@@ -6,8 +6,11 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Typewriter } from "react-simple-typewriter";
 import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
+  const { push } = useRouter();
+
   return (
     <section className="container flex flex-col lg:flex-row items-center justify-between gap-8 min-h-[30vh]">
       {/* Left Column: Name & Intro */}
@@ -49,7 +52,7 @@ const Hero = () => {
         </p>
 
         <div className="flex items-center gap-3">
-          <Button>View Portfolio</Button>
+          <Button onClick={() => push("/projects")}>View Projects</Button>
           <Button variant={"link"}>
             <Link
               href={"https://medium.com/@arinzeobidiegwu"}

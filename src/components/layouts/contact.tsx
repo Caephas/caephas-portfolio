@@ -64,9 +64,11 @@ const Contact = () => {
           </p>
         </div>
 
-        <Button variant={"destructive"} size={"lg"} className="w-fit">
-          Download CV
-        </Button>
+        <Link href="mailto:arinzeobidiegwu@gmail.com">
+          <Button variant={"destructive"} size={"lg"} className="w-fit">
+            Request CV
+          </Button>
+        </Link>
       </div>
 
       <div className="col-span-1 px-6 w-full">
@@ -90,9 +92,9 @@ const Contact = () => {
           <Link href="https://github.com/caephas" className={cn(scaleStyle)}>
             <Github size={30} />
           </Link>
-          <Link href="https://x.com" className={cn(scaleStyle)}>
+          {/* <Link href="https://x.com" className={cn(scaleStyle)}>
             <Twitter size={30} />
-          </Link>
+          </Link> */}
         </div>
       </div>
     </section>

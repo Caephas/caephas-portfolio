@@ -3,7 +3,7 @@ import ProjectsList from "@/components/common/projects-list";
 
 const Projects = () => {
   return (
-    <section className="container flex flex-col py-20 gap-20">
+    <section className="container flex flex-col py-10 lg:py-20 gap-20">
       {/* header */}
       <header className="w-full flex flex-col justify-center items-center">
         <h5 className="text-center text-sm flex items-center justify-center gap-3 text-primary w-full">
