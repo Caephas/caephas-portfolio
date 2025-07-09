@@ -13,8 +13,10 @@ export const DialogModal = ({ demoUrl }: { demoUrl: string }) => {
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        <div className="w-fit border border-gray-600 px-3 py-1 flex items-center gap-2 rounded-md cursor-pointer">
-          <p className="text-sm">{isInstagramReel ? "View Reel" : "View Demo"}</p>
+        <div className="w-fit border transition-transform duration-200 ease-in-out hover:scale-110 border-gray-600 px-3 py-1 flex items-center gap-2 rounded-md cursor-pointer">
+          <p className="text-sm">
+            {isInstagramReel ? "View Reel" : "View Demo"}
+          </p>
           <LED delay={0} />
         </div>
       </Dialog.Trigger>
@@ -26,7 +28,7 @@ export const DialogModal = ({ demoUrl }: { demoUrl: string }) => {
           aria-description="video"
           className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-[800px] max-h-[85vh] bg-dark rounded-md p-6 focus:outline-none"
         >
-          <div className="h-[420px]">
+          <div className="h-[420px] overflow-y-scroll">
             {isInstagramReel ? (
               // For Instagram Reels, use InstagramReelEmbed
               <InstagramReelEmbed reelUrl={demoUrl.split("?")[0]} />
