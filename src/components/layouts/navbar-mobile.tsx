@@ -11,7 +11,7 @@ import {
 import Link from "next/link";
 import { Menu, SquareMenu } from "lucide-react";
 import { Button } from "../ui/button";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 interface Props {
   navLinks: {
@@ -22,11 +22,12 @@ interface Props {
 
 const NavbarMobile = ({ navLinks }: Props) => {
   const pathname = usePathname();
+  const { push } = useRouter();
 
   return (
     <nav className="bg-navBg py-4 px-6 flex lg:hidden text-white justify-between items-center">
       <Link href="/" className="text-2xl">
-        Logo
+        Caephas
       </Link>
 
       <Sheet>
@@ -67,7 +68,10 @@ const NavbarMobile = ({ navLinks }: Props) => {
                 })}
               </div>
 
-              <Button className="bg-navBtn text-navBtnForeground w-fit hover:bg-navBtn">
+              <Button
+                onClick={() => push("/#contact_me")}
+                className="bg-navBtn text-navBtnForeground w-fit hover:bg-navBtn"
+              >
                 Contact Me.
               </Button>
             </SheetDescription>

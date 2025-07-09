@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import Navbar from "@/components/layouts/navbar";
+import Contact from "@/components/layouts/contact";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -62,6 +63,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
+          <Contact />
           <ThemeSwitcher />
         </ThemeProvider>
       </body>

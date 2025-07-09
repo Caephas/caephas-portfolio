@@ -1,24 +1,24 @@
 import React from "react";
-import ProjectsList from "../common/projects-list";
+import BlogList from "../common/blog-list";
 
-const Projects = () => {
+const Blogs = () => {
   return (
     <section className="container flex flex-col py-20 gap-20">
       {/* header */}
       <header className="w-full flex flex-col justify-center items-center">
         <h5 className="text-center text-sm flex items-center justify-center gap-3 text-primary w-full">
-          <span className="p-[2px] w-[25px] flex h-[1px] bg-primary"></span> MY
-          PROJECTS
+          <span className="p-[2px] w-[25px] flex h-[1px] bg-primary"></span>{" "}
+          BLOG
         </h5>
         <h3 className="text-3xl md:text-4xl lg:text-5xl text-center">
-          Catch A Glimpse Of My Work
+          Read My Latest Articles
         </h3>
       </header>
 
-      {/* projects list */}
-      <ProjectsList displayAll={false} />
+      {/* blog list */}
+      <BlogList displayAll={false} />
     </section>
   );
 };
 
-export default Projects;
+export default Blogs;

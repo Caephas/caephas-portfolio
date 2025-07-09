@@ -1,34 +1,34 @@
-import Link from 'next/link';
+import Link from "next/link";
 
-const BlogPostcard = ({
+const BlogPostCard = ({
   title,
-  excerpt,
-  slug,
+  link,
+  date,
+  category,
 }: {
   title: string;
-  excerpt: string;
-  slug: string;
+  link: string;
+  date: number;
+  category?: string;
 }) => {
-  const header = title.toLowerCase().split(' ').join('-');
+  const header = title;
+  // .toLowerCase().split(' ').join('-')
+  const pubDate = new Date(date).toLocaleDateString();
   return (
-    <Link href={`/blog/${slug}`}>
-      <div className="w-full bg-accentLight dark:bg-accentDark p-4 rounded-lg">
-        <div className="flex items-center gap-x-3 gap-y-6">
-          <span className="text-green-700">$</span>
-          <span className="text-xl flex items-center gap-3">
-            <h3 className="">cat</h3>
-            {/* <h3 className="line-clamp-1">optimizing-aws-lambda</h3> */}
-            <h3 className="line-clamp-1">{header}</h3>
-          </span>
-          <div className="cursor"></div>
+    <Link href={link} target="_blank">
+      <div className="h-full w-full bg-accent border border-secondary p-4 rounded-lg flex flex-col justify-between">
+        <div className="flex items-start gap-x-3 gap-y-6">
+          <p className="text-green-700">$</p>
+          <h3 className="line-clamp-2 text-2xl">{header}</h3>
         </div>
-        <div className="mt-3">
-          <p className="line-clamp-6">{excerpt}</p>
-          <p className="mt-3 text-sm">2025-02-10</p>
+
+        <div className="mt-3 flex justify-between">
+          <p className="mt-3 text-sm italic text-accent-yellow">{category}</p>
+          <p className="mt-3 text-sm italic">{pubDate}</p>
         </div>
       </div>
     </Link>
   );
 };
 
-export default BlogPostcard;
+export default BlogPostCard;

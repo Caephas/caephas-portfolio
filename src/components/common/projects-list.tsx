@@ -1,6 +1,8 @@
 "use client";
-import { ExternalLink } from "lucide-react";
+
 import React, { useEffect, useState } from "react";
+import ProjectListLoader from "../loaders/projects-loaders";
+import ProjectCard from "../ProjectCard";
 
 interface Project {
   fields: {
@@ -12,7 +14,11 @@ interface Project {
   createdTime?: string;
 }
 
-const ProjectsList = () => {
+interface ProjectsListProps {
+  displayAll?: boolean;
+}
+
+const ProjectsList = ({ displayAll = false }: ProjectsListProps) => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -61,31 +67,31 @@ const ProjectsList = () => {
     fetchProjects();
   }, []);
 
-  console.log(projects);
+  const visibleProjects = displayAll ? projects : projects.slice(0, 3);
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
-      {/* project card */}
-      <div className="group flex flex-col gap-6 bg-accent px-6 py-10 border-primary rounded-2xl shadow-md transition-all duration-300 hover:shadow-lg cursor-pointer">
-        <div className="flex justify-between items-start relative overflow-visible">
-          <h4 className="flex flex-col text-xl md:text-3xl">
-            <span className="text-xs">PROJECT TITLE</span>Adventures of Muna
-          </h4>
-          <ExternalLink
-            size={20}
-            color="#3c71dd"
-            className="transform -translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
-            strokeWidth={3}
-            absoluteStrokeWidth
-          />
+    <section className="flex flex-col">
+      {loading && (
+        <div className="mt-12">
+          <ProjectListLoader />
         </div>
+      )}
 
-        <p className="text-base text-accent-foreground">
-          Inspired by nature, I develop optimization algorithms that evolve over
-          time, just like living organisms. These algorithms help tackle complex
-          challenges in AI, robotics, and automated design systems.
-        </p>
-      </div>
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
+        {!loading &&
+          visibleProjects.length > 0 &&
+          visibleProjects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              title={project.fields.name}
+              link={`/projects/${project.id}`}
+              exerpt={project.fields.description?.slice(0, 300)}
+              category={project.fields.category}
+            />
+          ))}
+
+        {!loading && visibleProjects.length < 1 && <p>No Projects Available</p>}
+      </section>
     </section>
   );
 };

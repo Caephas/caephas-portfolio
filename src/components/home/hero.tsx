@@ -9,7 +9,7 @@ import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="container flex flex-col lg:flex-row items-center justify-between gap-8 min-h-[60vh]">
+    <section className="container flex flex-col lg:flex-row items-center justify-between gap-8 min-h-[30vh]">
       {/* Left Column: Name & Intro */}
       <div className="lg:w-1/2 flex flex-col gap-6 justify-center">
         <div>

@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
@@ -14,11 +14,12 @@ interface Props {
 
 const NavbarDesktop = ({ navLinks }: Props) => {
   const pathname = usePathname();
+  const { push } = useRouter();
 
   return (
     <nav className="hidden container bg-navBg py-4 px-6 rounded-full text-white lg:flex items-center justify-between gap-5">
       <Link href="/" className="text-2xl">
-        Arinze.
+        Caephas
       </Link>
 
       {/* links */}
@@ -50,7 +51,10 @@ const NavbarDesktop = ({ navLinks }: Props) => {
         })}
       </div>
 
-      <Button className="bg-navBtn text-navBtnForeground hover:bg-navBtn">
+      <Button
+        onClick={() => push("/#contact_me")}
+        className="bg-navBtn text-navBtnForeground hover:bg-navBtn"
+      >
         Contact Me.
       </Button>
     </nav>

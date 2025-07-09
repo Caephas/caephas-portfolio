@@ -1,93 +1,22 @@
-"use client";
-import { useState, useEffect } from "react";
-import ProjectCard2 from "@/components/ProjectCard2";
-
-interface Project {
-  fields: {
-    name: string;
-    description?: string;
-    category?: string;
-  };
-  id?: string;
-  createdTime?: string;
-}
+import ProjectsList from "@/components/common/projects-list";
 
 const page = () => {
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-
-  const config = {
-    baseId: process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID,
-    tableId: process.env.NEXT_PUBLIC_AIRTABLE_TABLE_ID,
-    api_token: process.env.NEXT_PUBLIC_AIRTABLE_API_TOKEN,
-  };
-
-  const fetchProjects = async () => {
-    const maxRetries = 3;
-    const retryDelay = 1000;
-
-    for (let i = 0; i <= maxRetries; i++) {
-      try {
-        const response = await fetch(
-          `https://api.airtable.com/v0/${config.baseId}/${config.tableId}`,
-          {
-            headers: {
-              Authorization: `Bearer ${config.api_token}`,
-            },
-          }
-        );
-        const data = await response.json();
-        if (data.records) {
-          setProjects(data.records);
-        } else {
-          console.error("No records found:", data);
-        }
-        return data;
-      } catch (error) {
-        if (i < maxRetries) {
-          console.log(`Retry ${i + 1} in ${retryDelay}ms...`);
-          await new Promise((resolve) => setTimeout(resolve, retryDelay));
-        } else {
-          console.error("Error fetching projects:", error);
-          return [];
-        }
-      } finally {
-        setLoading(false);
-      }
-    }
-  };
-
-  useEffect(() => {
-    fetchProjects();
-  }, []);
-
-  console.log(projects);
-
   return (
-    <div className="p-6">
-      <h2 className="text-6xl">Projects</h2>
-      {loading ? (
-        <div className="mt-12">
-          <p>Loading projects...</p>
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-          {projects.length > 0 ? (
-            projects.map((project) => (
-              <ProjectCard2
-                key={project.id}
-                title={project.fields.name}
-                link={`/projects/${project.id}`}
-                exerpt={project.fields.description?.slice(0, 300)}
-                category={project.fields.category}
-              />
-            ))
-          ) : (
-            <p>No projects available</p>
-          )}
-        </div>
-      )}
-    </div>
+    <section className="container flex flex-col py-20 px-6 gap-20">
+      {/* header */}
+      <header className="w-full flex flex-col justify-center items-center">
+        <h5 className="text-center text-sm flex items-center justify-center gap-3 text-primary w-full">
+          <span className="p-[2px] w-[25px] flex h-[1px] bg-primary"></span> MY
+          PROJECTS
+        </h5>
+        <h3 className="text-3xl md:text-4xl lg:text-5xl text-center">
+          Catch A Glimpse Of My Work
+        </h3>
+      </header>
+
+      {/* projects list */}
+      <ProjectsList displayAll={true} />
+    </section>
   );
 };
 

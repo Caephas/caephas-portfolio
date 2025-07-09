@@ -1,15 +1,5 @@
 import { cn } from "@/lib/utils";
-import clsx from "clsx";
-import {
-  Brain,
-  Code2,
-  Atom,
-  FlaskConical,
-  GitBranch,
-  SquareCode,
-  UserSearch,
-} from "lucide-react";
-import { Span } from "next/dist/trace";
+import { Brain, Atom, GitBranch, SquareCode, UserSearch } from "lucide-react";
 import React from "react";
 
 const Skills = () => {
