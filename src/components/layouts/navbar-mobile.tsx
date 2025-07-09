@@ -9,8 +9,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Link from "next/link";
-import { Menu, SquareMenu } from "lucide-react";
-import { Button } from "../ui/button";
+import { SquareMenu } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 

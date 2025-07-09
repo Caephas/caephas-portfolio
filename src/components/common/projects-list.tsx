@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import ProjectListLoader from "../loaders/projects-loaders";
-import ProjectCard from "../ProjectCard";
+import ProjectListLoader from "@/components/loaders/projects-loaders";
+import ProjectCard from "@/components/ProjectCard";
 
 interface Project {
   fields: {
