@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import ProjectListLoader from "@/components/loaders/projects-loaders";
-import ProjectCard from "@/components/ProjectCard";
+import ProjectCard from "./project-card";
 
 interface Project {
   fields: {
