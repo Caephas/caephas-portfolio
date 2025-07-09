@@ -28,7 +28,7 @@ const NavbarMobile = ({ navLinks }: Props) => {
   return (
     <nav className="bg-navBg py-4 px-6 flex lg:hidden text-white justify-between items-center">
       <Link href="/" className="text-2xl">
-        <Image src="/logo.svg" alt="" width={200} height={20} />
+        <Image src="/logo.svg" alt="" width={150} height={20} />
       </Link>
 
       <Sheet>
