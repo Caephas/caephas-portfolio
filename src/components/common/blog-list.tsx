@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { BlogFilter } from "@/components/BlogFilter";
-import ProjectListLoader from "../loaders/projects-loaders";
-import BlogPostCard from "../BlogPostCard";
+import ProjectListLoader from "@/components/loaders/projects-loaders";
+import BlogPostCard from "./blog-post-card";
 
 interface Post {
   id: string;

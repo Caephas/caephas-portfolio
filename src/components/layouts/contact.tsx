@@ -1,7 +1,7 @@
 import { Github, Linkedin, Mail, Phone, Twitter } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { cn, scaleStyle } from "@/lib/utils";
 
@@ -60,7 +60,7 @@ const Contact = () => {
 
           <p className="flex flex-col text-base">
             <span>Phone</span>
-            <span>+448098237363</span>
+            <span>+3530870309305</span>
           </p>
         </div>
 
