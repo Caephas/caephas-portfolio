@@ -1,7 +1,6 @@
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { cn, scaleStyle } from "@/lib/utils";
 
@@ -64,11 +63,12 @@ const Contact = () => {
           </p>
         </div>
 
-        <Link href="mailto:arinzeobidiegwu@gmail.com">
-          <Button variant={"destructive"} size={"lg"} className="w-fit">
-            Request CV
-          </Button>
-        </Link>
+        <a
+          href="mailto:arinzeobidiegwu@gmail.com"
+          className="bg-destructive text-destructive-foreground hover:bg-destructive/90 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm lg:text-base font-medium transition-transform duration-200 ease-in-out px-8 w-fit h-11"
+        >
+          Request CV
+        </a>
       </div>
 
       <div className="col-span-1 px-6 w-full">
