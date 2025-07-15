@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Phone, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -60,7 +60,7 @@ const Contact = () => {
 
           <p className="flex flex-col text-base">
             <span>Phone</span>
-            <span>+3530870309305</span>
+            <a href="tel:+3530870309305">+3530870309305</a>
           </p>
         </div>
 
@@ -82,6 +82,13 @@ const Contact = () => {
           © {new Date().getFullYear()} Caephas. All Rights Reserved.
         </p>
 
+        <p className="text-sm text-white text-center">
+          Designed & Built by{" "}
+          <a href="mailto:priscaebube@gmail.com" className="text-accent-yellow">
+            Prisca
+          </a>
+        </p>
+
         <div className="flex gap-10 items-center transition-transform">
           <Link
             href="https://www.linkedin.com/in/arinze-obidiegwu-a71a78188"
@@ -92,9 +99,6 @@ const Contact = () => {
           <Link href="https://github.com/caephas" className={cn(scaleStyle)}>
             <Github size={30} />
           </Link>
-          {/* <Link href="https://x.com" className={cn(scaleStyle)}>
-            <Twitter size={30} />
-          </Link> */}
         </div>
       </div>
     </section>
