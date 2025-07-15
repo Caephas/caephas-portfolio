@@ -2,6 +2,7 @@
 import React from "react";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
@@ -47,34 +48,38 @@ const NavbarMobile = ({ navLinks }: Props) => {
 
                   return (
                     <div key={i} className="group flex items-center">
-                      <Link
-                        href={item.link}
-                        className={`text-lg font-sans flex items-center gap-2 transition-transform duration-200 ease-in-out hover:scale-110 ${
-                          isActive ? "font-semibold" : ""
-                        }`}
-                      >
-                        {/* Circle */}
-                        <span
-                          className={`w-2 h-2 rounded-full bg-foreground transition-opacity duration-200 ${
-                            isActive
-                              ? "opacity-100"
-                              : "opacity-0 group-hover:opacity-100"
+                      <SheetClose asChild>
+                        <Link
+                          href={item.link}
+                          className={`text-lg font-sans flex items-center gap-2 transition-transform duration-200 ease-in-out hover:scale-110 ${
+                            isActive ? "font-semibold" : ""
                           }`}
-                        />
+                        >
+                          {/* Circle */}
+                          <span
+                            className={`w-2 h-2 rounded-full bg-foreground transition-opacity duration-200 ${
+                              isActive
+                                ? "opacity-100"
+                                : "opacity-0 group-hover:opacity-100"
+                            }`}
+                          />
 
-                        {item.name}
-                      </Link>
+                          {item.name}
+                        </Link>
+                      </SheetClose>
                     </div>
                   );
                 })}
               </div>
 
-              <Button
-                onClick={() => push("/#contact_me")}
-                className="bg-navBtn text-navBtnForeground w-fit hover:bg-navBtn"
-              >
-                Contact Me.
-              </Button>
+              <SheetClose asChild>
+                <Button
+                  onClick={() => push("/#contact_me")}
+                  className="bg-navBtn text-navBtnForeground w-fit hover:bg-navBtn"
+                >
+                  Contact Me.
+                </Button>
+              </SheetClose>
             </SheetDescription>
           </SheetHeader>
         </SheetContent>
