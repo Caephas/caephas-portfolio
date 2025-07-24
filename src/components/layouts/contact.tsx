@@ -85,7 +85,7 @@ const Contact = () => {
         <p className="text-sm text-white text-center">
           Designed & Built by{" "}
           <a href="mailto:priscaebube@gmail.com" className="text-accent-yellow">
-            Prisca
+            Prisca Onwudebelu
           </a>
         </p>
 

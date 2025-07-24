@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Certification from "@/components/home/certification";
 
 const page = () => {
   return (
@@ -117,6 +118,8 @@ const page = () => {
           </p>
         </div>
       </section>
+
+      <Certification />
     </div>
   );
 };
