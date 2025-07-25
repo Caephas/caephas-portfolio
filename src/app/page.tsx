@@ -3,6 +3,7 @@ import Hero from "@/components/home/hero";
 import Skills from "@/components/home/skills";
 import Projects from "@/components/home/projects";
 import Blogs from "@/components/home/blogs";
+import Certification from "@/components/home/certification";
 
 export default function Home() {
   return (
@@ -18,6 +19,9 @@ export default function Home() {
 
       {/* blogs */}
       <Blogs />
+
+      {/* certificates */}
+      <Certification />
     </div>
   );
 }
