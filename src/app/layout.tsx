@@ -18,14 +18,14 @@ export const metadata: Metadata = {
   title:
     "Arinze Obidiegwu | Software Engineer, ML Engineer & Research Scientist",
   description:
-    "Hello 👋, I'm Arinze Obidiegwu, a Software Engineer, Machine Learning Engineer, and Researcher specializing in Quantum Algorithms & Machine Learning. Explore my portfolio for projects, research insights, certifications, and more.",
+    "Hello 👋, I'm Arinze Obidiegwu, a Software Engineer, a Machine Learning Engineer, and a Researcher specializing in Quantum Algorithms & Machine Learning. Explore my portfolio for projects, research insights, certifications, and more.",
   openGraph: {
     type: "website",
     siteName:
       "Arinze Obidiegwu | Software Engineer, ML Engineer & Research Scientist",
     images: [
       {
-        url: "/logo.png", // Replace with your actual logo URL if needed
+        url: "/logo-b.png", // Replace with your actual logo URL if needed
         alt: "Arinze Obidiegwu Portfolio Logo",
       },
     ],
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     title:
       "Arinze Obidiegwu | Software Engineer, ML Engineer & Research Scientist",
     description:
-      "Hello 👋, I'm Arinze Obidiegwu, a Software Engineer, Machine Learning Engineer, and Researcher specializing in Quantum Algorithms & Machine Learning. Explore my portfolio for projects, research insights, certifications, and more.",
-    images: ["/logo.png"],
+      "Hello 👋, I'm Arinze Obidiegwu, a Software Engineer, a Machine Learning Engineer, and a Researcher specializing in Quantum Algorithms & Machine Learning. Explore my portfolio for projects, research insights, certifications, and more.",
+    images: ["/logo-b.png"],
   },
 };
 
