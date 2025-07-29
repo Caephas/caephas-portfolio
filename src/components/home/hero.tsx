@@ -30,7 +30,6 @@ const Hero = () => {
                   "Software Engineer.",
                   "Machine Learning Engineer.",
                   "Research Scientist.",
-                  "Technical Project Manager.",
                 ]}
                 loop={true}
                 cursor
