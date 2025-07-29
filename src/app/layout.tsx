@@ -12,17 +12,31 @@ const inter = Inter({
   weight: ["400", "500", "600", "700"],
 });
 
+export const metadataBase = new URL("https://www.terminaltech.dev");
+
 export const metadata: Metadata = {
-  title: "Arinze Obidiegwu | Software Engineer, ML Engineer & Researcher",
+  title:
+    "Arinze Obidiegwu | Software Engineer, ML Engineer & Research Scientist",
   description:
-    "Arinze Obidiegwu is a Software Engineer, Machine Learning Engineer, and Researcher specializing in Quantum Algorithms & Machine Learning. Explore his portfolio for projects, research insights, and more.",
+    "Hello 👋, I'm Arinze Obidiegwu, a Software Engineer, Machine Learning Engineer, and Researcher specializing in Quantum Algorithms & Machine Learning. Explore my portfolio for projects, research insights, certifications, and more.",
   openGraph: {
+    type: "website",
+    siteName:
+      "Arinze Obidiegwu | Software Engineer, ML Engineer & Research Scientist",
     images: [
       {
-        url: "/logo.jpeg", // Replace with your actual logo URL if needed
-        alt: "Caephas Portfolio Logo",
+        url: "/logo.png", // Replace with your actual logo URL if needed
+        alt: "Arinze Obidiegwu Portfolio Logo",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Arinze Obidiegwu | Software Engineer, ML Engineer & Research Scientist",
+    description:
+      "Hello 👋, I'm Arinze Obidiegwu, a Software Engineer, Machine Learning Engineer, and Researcher specializing in Quantum Algorithms & Machine Learning. Explore my portfolio for projects, research insights, certifications, and more.",
+    images: ["/logo.png"],
   },
 };
 
