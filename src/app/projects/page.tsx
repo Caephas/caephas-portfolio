@@ -1,4 +1,5 @@
 import ProjectsList from "@/components/common/projects-list";
+import Researches from "@/components/home/researches";
 
 const page = () => {
   return (
@@ -16,6 +17,9 @@ const page = () => {
 
       {/* projects list */}
       <ProjectsList displayAll={true} />
+
+      {/* research docs */}
+      <Researches />
     </section>
   );
 };

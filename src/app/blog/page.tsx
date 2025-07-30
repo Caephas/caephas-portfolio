@@ -1,4 +1,5 @@
 import BlogList from "@/components/common/blog-list";
+import Researches from "@/components/home/researches";
 
 export default function BlogPage() {
   return (
@@ -16,6 +17,9 @@ export default function BlogPage() {
 
       {/* blog list */}
       <BlogList showFilter={true} />
+
+      {/* research docs */}
+      <Researches />
     </section>
   );
 }

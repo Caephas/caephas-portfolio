@@ -74,8 +74,11 @@ const Certification = () => {
                 <p>{item?.issuer}</p>
 
                 <div className="flex flex-wrap gap-3 items-center mt-2">
-                  {item?.skills?.map((skill) => (
-                    <span className="bg-accent border border-muted-foreground text-accent-foreground py-1 px-2 rounded-full text-xs">
+                  {item?.skills?.map((skill, i) => (
+                    <span
+                      key={i}
+                      className="bg-accent border border-muted-foreground text-accent-foreground py-1 px-2 rounded-full text-xs"
+                    >
                       {skill}
                     </span>
                   ))}
