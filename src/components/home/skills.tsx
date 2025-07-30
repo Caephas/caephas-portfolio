@@ -71,7 +71,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="container flex flex-col py-10 lg:py-20 gap-20">
+    <section className="container flex flex-col py-10 lg:py-16 gap-20">
       {/* header */}
       <header className="w-full flex flex-col justify-center items-center">
         <h5 className="text-center text-sm flex items-center justify-center gap-3 text-primary w-full">
@@ -105,8 +105,11 @@ const Skills = () => {
                 {item?.text}
               </p>
               <div className="flex flex-wrap gap-3 items-center">
-                {item?.tools?.map((tool) => (
-                  <span className="bg-accent border border-muted-foreground text-accent-foreground py-1 px-2 rounded-full text-xs">
+                {item?.tools?.map((tool, i) => (
+                  <span
+                    key={i}
+                    className="bg-accent border border-muted-foreground text-accent-foreground py-1 px-2 rounded-full text-xs"
+                  >
                     {tool}
                   </span>
                 ))}

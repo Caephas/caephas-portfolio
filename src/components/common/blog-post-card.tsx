@@ -23,7 +23,7 @@ const BlogPostCard = ({
         </div>
 
         <div className="mt-3 flex justify-between">
-          <p className="mt-3 text-sm italic text-accent-yellow">{category}</p>
+          <p className="mt-3 text-sm text-accent-yellow">{category}</p>
           <p className="mt-3 text-sm italic">{pubDate}</p>
         </div>
       </div>

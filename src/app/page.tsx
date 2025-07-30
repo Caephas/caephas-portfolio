@@ -4,6 +4,7 @@ import Skills from "@/components/home/skills";
 import Projects from "@/components/home/projects";
 import Blogs from "@/components/home/blogs";
 import Certification from "@/components/home/certification";
+import Researches from "@/components/home/researches";
 
 export default function Home() {
   return (
@@ -11,14 +12,17 @@ export default function Home() {
       {/* Hero section */}
       <Hero />
 
-      {/* projects section */}
-      <Projects />
-
       {/* skills section */}
       <Skills />
 
       {/* blogs */}
       <Blogs />
+
+      {/* research docs */}
+      <Researches />
+
+      {/* projects section */}
+      <Projects />
 
       {/* certificates */}
       <Certification />
