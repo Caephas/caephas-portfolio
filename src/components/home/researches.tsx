@@ -69,6 +69,15 @@ const Researches = () => {
 
                 <div className="bg-accent/75 flex justify-center items-center absolute left-0 top-0 w-full h-full transform -translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 text-white">
                   <PDFViewerWithPagination paperLink={item?.link} />
+                  <Button className="lg:hidden" asChild>
+                    <a
+                      href={item?.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Read Full Paper
+                    </a>
+                  </Button>
                 </div>
               </div>
             </div>

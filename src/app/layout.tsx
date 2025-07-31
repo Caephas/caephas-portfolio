@@ -12,7 +12,7 @@ const inter = Inter({
   weight: ["400", "500", "600", "700"],
 });
 
-export const metadataBase = new URL("https://www.terminaltech.dev");
+export const metadataBase = new URL(process.env.NEXT_PUBLIC_DOMAIN as string);
 
 export const metadata: Metadata = {
   title:
