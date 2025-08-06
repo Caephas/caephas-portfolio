@@ -28,70 +28,66 @@ const page = () => {
         </div>
 
         {/* Right Column: Text */}
-        <div className="w-full flex flex-col gap-3 md:w-1/2">
+        <div className="w-full flex flex-col gap-4 md:w-1/2">
           <p className="leading-7">
-            Hey 👋, I'm Arinze. I'm a Software Engineer with a growing passion
-            for Machine Learning and Research. I love building efficient,
-            scalable systems, but even more, I enjoy pushing the boundaries of
-            what's possible through computation.
+            Hey 👋, I'm Arinze. I'm a Senior Software Developer passionate about bridging the gap between cutting-edge research and real-world industrial challenges. My work centers on using software, AI, and machine learning to build intelligent systems that solve complex problems—from smart manufacturing to quantum computing.
           </p>
 
           <p className="leading-7">
-            Right now, I get to do both. At{" "}
-            <Link
-              href="https://bds.ul.ie/members.html"
+            Currently, as a Senior Software Developer at{" "}
+            <a
+              href="https://gis.ie/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="underline font-semibold text-blue-600 dark:text-blue-400"
             >
-              BDS group
-            </Link>
-            , I’m a Research Intern working on evolutionary computing,
-            specifically Grammatical Evolution, to design quantum circuits. One
-            of my breakthroughs? Evolving a circuit for Grover’s algorithm (3
-            qubits) that outperformed the world standard. I’m now applying the
-            same technique to other quantum algorithms.
+              Gallarus Industry Solutions
+            </a>
+            , I'm at the forefront of the smart manufacturing revolution. I apply AI and ML to enhance industrial processes and contribute to the architecture of advanced Digital Twin and Unified Namespace (UNS) ecosystems, turning vast operational data into actionable intelligence.
           </p>
 
-          <p>
-            On the engineering side, I lead project development for{" "}
+          <p className="leading-7">
+  My passion for deep-tech was cemented during my research on evolutionary computing at the{" "}
+  <Link
+    href="https://bds.ul.ie/members.html"
+    className="underline font-semibold text-blue-600 dark:text-blue-400"
+  >
+    BDS group
+  </Link>
+  , where I applied Grammatical Evolution to synthesise executable quantum circuits from scratch. A key breakthrough came when I evolved a 3-qubit Grover’s algorithm circuit that outperformed canonical implementations—achieving over 90% reductions in depth and gate count while improving fidelity on real IBM quantum hardware. It was a clear moment where I saw theory, experimentation, and innovation converge.
+</p>
+          
+          <p className="leading-7">
+            I also have a strong background in leading product development. For{" "}
             <Link
               href="https://thesafetychic.com/about/"
               className="underline font-semibold text-blue-600 dark:text-blue-400"
             >
               TheSafetyChic
             </Link>
-            , building a child safety mobile app in Flutter. It’s a project that
-            matters, and it’s fulfilling to guide it from idea to impact.
-          </p>
-
-          <p className="leading-7">
-            I'm also someone who loves the intense creativity of hackathons. A
-            highlight was leading the backend development for our "Star Student"
-            project at{" "}
+            , I guided the creation of a child safety mobile app in Flutter, taking it from a concept to a high-impact tool. This drive to compete and innovate under pressure has also led to wins at major hackathons, including those hosted by{" "}
             <a
-              href="https://www.linkedin.com/posts/arinze-obidiegwu-a71a78188_bgniehackathon2024-google-starstudent-activity-7252029587356876800-4ibL?utm_source=share&utm_medium=member_desktop&rcm=ACoAACxL6vUBK_CMdMvr19o25M_Kt87opNXUOe4"
+              href="https://www.linkedin.com/posts/arinze-obidiegwu-a71a78188_bgniehackathon2024-google-starstudent-activity-7252029587356876800-4ibL?utm_source=share&utm_medium=member_desktop"
               target="_blank"
               rel="noopener noreferrer"
               className="underline font-semibold text-blue-600 dark:text-blue-400"
             >
-              Google BGN Ireland
+              Google
             </a>
-            , which landed us 2nd place by empowering teachers with custom
-            safety stories. Another proud moment was winning the{" "}
+            {" "}and{" "}
             <a
-              href="https://www.linkedin.com/posts/arinze-obidiegwu-a71a78188_hackathon-winningteam-aciworldwide-activity-7252747561495646208-aQ0z?utm_source=share&utm_medium=member_desktop&rcm=ACoAACxL6vUBK_CMdMvr19o25M_Kt87opNXUOe4"
+              href="https://www.linkedin.com/posts/arinze-obidiegwu-a71a78188_hackathon-winningteam-aciworldwide-activity-7252747561495646208-aQ0z?utm_source=share&utm_medium=member_desktop"
               target="_blank"
               rel="noopener noreferrer"
               className="underline font-semibold text-blue-600 dark:text-blue-400"
             >
-              ACI Worldwide Hackathon
+              ACI Worldwide
             </a>
-            , where I focused on designing robust systems for finance challenges
-            like currency transactions and fraud detection. It really tests your
-            problem-solving skills under deadlines.
+            , where my teams tackled challenges in education and financial tech.
           </p>
 
           <p className="leading-7">
-            I believe in sharing the journey, too. On my{" "}
+            I believe in sharing the journey. On my{" "}
             <a
               href="https://medium.com/@arinzeobidiegwu"
               target="_blank"
@@ -100,21 +96,7 @@ const page = () => {
             >
               blog
             </a>
-            , you'll find me trying to break down complex technical concepts
-            (including some of that ML and Quantum Computing stuff!) using
-            analogies into understandable formats. I sometimes just write random
-            thoughts or life stuff that pops into my head.
-          </p>
-
-          <p className="leading-7">
-            I'm particularly interested in building solutions that genuinely
-            improve lives, particularly in child safety and education.
-          </p>
-
-          <p className="leading-7">
-            And when I'm not immersed in tech? You might catch me playing video
-            games, or, just as importantly, spending time mentoring aspiring
-            developers and contributing where I can to help others grow.
+            , I break down complex topics in ML and Quantum Computing, and when I'm not immersed in tech, you can find me playing video games or mentoring aspiring developers.
           </p>
         </div>
       </section>

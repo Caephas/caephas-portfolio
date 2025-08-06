@@ -27,9 +27,10 @@ const Hero = () => {
             <span className="text-primary">
               <Typewriter
                 words={[
+                  "Research Scientist.",
                   "Software Engineer.",
                   "Machine Learning Engineer.",
-                  "Research Scientist.",
+                  "Quantum Computing Enthusiast.",   
                 ]}
                 loop={true}
                 cursor
@@ -37,16 +38,14 @@ const Hero = () => {
                 typeSpeed={70}
                 deleteSpeed={50}
                 delaySpeed={1500}
-              />
+              /> 
             </span>
           </h3>
         </div>
 
         <p className="max-w-lg text-base md:text-lg leading-7">
-          You can call me Arinze. I enjoy breaking down complex topics using
-          analogies and sharing insights on software engineering, quantum
-          computing, machine learning, and life. You’ll find many of my thoughts
-          and writings on my blog — always curious, always learning.
+          You can call me Arinze. I'm driven by a single mission: to simplify and solve complex problems. 
+          I apply a researcher's curiosity to the fields of Software Engineering and Machine Learning and Quantum Computing.
         </p>
 
         <div className="flex items-center gap-3">
