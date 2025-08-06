@@ -87,7 +87,7 @@ const page = () => {
           </p>
 
           <p className="leading-7">
-            I believe in sharing the journey. On my{" "}
+            I believe in sharing my journey and thoughts. On my{" "}
             <a
               href="https://medium.com/@arinzeobidiegwu"
               target="_blank"
@@ -96,7 +96,7 @@ const page = () => {
             >
               blog
             </a>
-            , I break down complex topics in ML and Quantum Computing, and when I'm not immersed in tech, you can find me playing video games or mentoring aspiring developers.
+            , I like to communicate my ideas on different things, and when I'm not immersed in tech, you can find me playing video games or mentoring aspiring developers.
           </p>
         </div>
       </section>
