@@ -30,7 +30,7 @@ const page = () => {
         {/* Right Column: Text */}
         <div className="w-full flex flex-col gap-4 md:w-1/2">
           <p className="leading-7">
-            Hey 👋, I'm Arinze. I'm a Senior Software Developer passionate about bridging the gap between cutting-edge research and real-world industrial challenges. My work centers on using software, AI, and machine learning to build intelligent systems that solve complex problems—from smart manufacturing to quantum computing.
+            Hey 👋, I'm Arinze. I'm a Senior Software Developer passionate about bridging the gap between cutting-edge research and real-world industrial challenges. My work centers on using software, AI, and machine learning to build intelligent systems that solve complex problems from smart manufacturing to quantum computing.
           </p>
 
           <p className="leading-7">
@@ -54,7 +54,7 @@ const page = () => {
   >
     BDS group
   </Link>
-  , where I applied Grammatical Evolution to synthesise executable quantum circuits from scratch. A key breakthrough came when I evolved a 3-qubit Grover’s algorithm circuit that outperformed canonical implementations—achieving over 90% reductions in depth and gate count while improving fidelity on real IBM quantum hardware. It was a clear moment where I saw theory, experimentation, and innovation converge.
+  , where I applied Grammatical Evolution to synthesise executable quantum circuits from scratch. A key breakthrough came when I evolved a 3-qubit Grover’s algorithm circuit that outperformed canonical implementations achieving over 90% reductions in depth and gate count while improving fidelity on real IBM quantum hardware. It was a clear moment where I saw theory, experimentation, and innovation converge.
 </p>
           
           <p className="leading-7">
