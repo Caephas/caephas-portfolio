@@ -45,7 +45,7 @@ const Hero = () => {
 
         <p className="max-w-lg text-base md:text-lg leading-7">
           You can call me Arinze. I'm driven by a single mission: to simplify and solve complex problems. 
-          I apply a researcher's curiosity to the fields of Software Engineering and Machine Learning and Quantum Computing.
+          I apply a researcher's curiosity to the fields of Software Engineering, Machine Learning and Quantum Computing.
         </p>
 
         <div className="flex items-center gap-3">
