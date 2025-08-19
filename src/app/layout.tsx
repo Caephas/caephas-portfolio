@@ -63,8 +63,12 @@ export default function RootLayout({
             `,
           }}
         />
+
         {/* Instagram Embed Script */}
         <script async src="https://www.instagram.com/embed.js"></script>
+
+        {/* Favicon */}
+        <link rel="icon" href="/logo-b.png" sizes="32x32" />
       </head>
       <body
         className={`${inter.className} lg:px-10 lg:py-10 bg-background text-foreground duration-300 ease-linear`}
