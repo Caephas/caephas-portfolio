@@ -100,7 +100,7 @@ const Skills = () => {
               <h6 className="text-xl md:text-3xl font-semibold">
                 {item?.title}
               </h6>
-              <p className="text-muted-foreground text-base flex gap-3 text-justify">
+              <p className="text-muted-foreground text-base flex gap-3">
                 <span className="p-[2px] w-[3px] flex h-auto bg-muted-foreground"></span>{" "}
                 {item?.text}
               </p>
